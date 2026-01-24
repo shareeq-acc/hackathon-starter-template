@@ -97,6 +97,28 @@ export {
 } from './email.dto';
 
 // ============================================================================
+// LLM DTOs
+// ============================================================================
+export {
+  // Request DTOs
+  GenerateTextDto,
+  GenerateQuotePromptDto,
+  
+  // Response DTOs
+  GenerateTextResponseDto,
+  LLMHealthResponseDto,
+  LLMStatsResponseDto,
+  LLMConfigDto,
+  LLMErrorResponseDto,
+  RateLimitStatusDto,
+  
+  // Utility Functions
+  createLLMErrorResponse,
+  createGenerateTextResponse,
+  createLLMHealthResponse
+} from './llm.dto';
+
+// ============================================================================
 // COMMON DTOs
 // ============================================================================
 export {
