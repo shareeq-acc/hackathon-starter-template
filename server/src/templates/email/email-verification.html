@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email Address</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #17a2b8;
+            margin-bottom: 10px;
+        }
+        .title {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+        .verification-icon {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 48px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .verify-button {
+            display: inline-block;
+            background-color: #17a2b8;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .verify-button:hover {
+            background-color: #138496;
+        }
+        .alternative-link {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #17a2b8;
+        }
+        .alternative-link p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .alternative-link code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+        }
+        .expiry-info {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .expiry-info p {
+            margin: 0;
+            color: #856404;
+            font-weight: 500;
+        }
+        .benefits {
+            background-color: #d1ecf1;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .benefits h3 {
+            color: #0c5460;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .benefits ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .benefits li {
+            margin-bottom: 8px;
+            color: #0c5460;
+        }
+        .security-note {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .security-note h4 {
+            color: #721c24;
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+        .security-note p {
+            color: #721c24;
+            margin: 0;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">TypeScript Backend API</div>
+            <h1 class="title">Verify Your Email</h1>
+            <p class="subtitle">Complete your account setup</p>
+        </div>
+
+        <div class="verification-icon">📧</div>
+
+        <div class="content">
+            <p class="greeting">Hello {{userName}},</p>
+            
+            <p class="message">
+                To complete your account setup and ensure the security of your account, 
+                please verify your email address by clicking the button below.
+            </p>
+
+            <div class="benefits">
+                <h3>✅ Why verify your email?</h3>
+                <ul>
+                    <li>Secure your account and enable password recovery</li>
+                    <li>Receive important account notifications</li>
+                    <li>Access all platform features without restrictions</li>
+                    <li>Ensure you don't miss important updates</li>
+                </ul>
+            </div>
+
+            <div class="button-container">
+                <a href="{{verificationUrl}}" class="verify-button">Verify Email Address</a>
+            </div>
+
+            <div class="expiry-info">
+                <p>⏰ This verification link will expire in {{expiryTime}}.</p>
+            </div>
+
+            <div class="alternative-link">
+                <p><strong>Button not working?</strong> Copy and paste this link into your browser:</p>
+                <p><code>{{verificationUrl}}</code></p>
+            </div>
+
+            <div class="security-note">
+                <h4>🔒 Security Information</h4>
+                <p>
+                    If you didn't create an account with us, please ignore this email. 
+                    Your email address will not be added to our system without verification.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>This email was sent from TypeScript Backend API</p>
+            <p>If you have any questions, please contact our support team.</p>
+            <p>&copy; {{currentYear}} TypeScript Backend API. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

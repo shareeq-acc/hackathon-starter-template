@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TypeScript Backend API</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        .title {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+        }
+        .welcome-banner {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .welcome-banner h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .greeting {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #28a745;
+            font-weight: 600;
+        }
+        .message {
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        .features {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .features h3 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .features ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .features li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .verify-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .verify-button:hover {
+            background-color: #218838;
+        }
+        .verification-notice {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .verification-notice h4 {
+            color: #0c5460;
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+        .verification-notice p {
+            color: #0c5460;
+            margin: 0;
+            font-size: 14px;
+        }
+        .support-info {
+            background-color: #e2e3e5;
+            border-left: 4px solid #6c757d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .support-info h4 {
+            color: #495057;
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+        .support-info p {
+            color: #495057;
+            margin: 0;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">TypeScript Backend API</div>
+            <h1 class="title">Welcome!</h1>
+            <p class="subtitle">Your account has been created successfully</p>
+        </div>
+
+        <div class="welcome-banner">
+            <h2>🎉 Welcome to our platform, {{userName}}!</h2>
+        </div>
+
+        <div class="content">
+            <p class="greeting">Hello {{userName}},</p>
+            
+            <p class="message">
+                Thank you for joining TypeScript Backend API! We're excited to have you on board. 
+                Your account has been created successfully and you're now part of our growing community.
+            </p>
+
+            <div class="features">
+                <h3>🚀 What you can do now:</h3>
+                <ul>
+                    <li>Access secure API endpoints with JWT authentication</li>
+                    <li>Generate inspiring quotes powered by AI</li>
+                    <li>Manage your profile and account settings</li>
+                    <li>Enjoy a fast and reliable TypeScript backend</li>
+                    <li>Benefit from comprehensive error handling and logging</li>
+                </ul>
+            </div>
+
+            {{#if verificationUrl}}
+            <div class="verification-notice">
+                <h4>📧 Email Verification Required</h4>
+                <p>
+                    To get started, please verify your email address by clicking the button below. 
+                    This helps us ensure the security of your account.
+                </p>
+            </div>
+
+            <div class="button-container">
+                <a href="{{verificationUrl}}" class="verify-button">Verify Email Address</a>
+            </div>
+            {{/if}}
+
+            <div class="support-info">
+                <h4>💬 Need Help?</h4>
+                <p>
+                    If you have any questions or need assistance getting started, don't hesitate to reach out to our support team at {{supportEmail}}. We're here to help!
+                </p>
+            </div>
+
+            <p class="message">
+                We're committed to providing you with the best experience possible. 
+                Thank you for choosing TypeScript Backend API!
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>This email was sent from TypeScript Backend API</p>
+            <p>You're receiving this because you created an account with us.</p>
+            <p>&copy; {{currentYear}} TypeScript Backend API. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

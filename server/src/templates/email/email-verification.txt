@@ -1,0 +1,27 @@
+TypeScript Backend API - Verify Your Email
+
+Hello {{userName}},
+
+To complete your account setup and ensure the security of your account, please verify your email address by visiting the link below.
+
+Verify Your Email Address:
+{{verificationUrl}}
+
+Why verify your email?
+✅ Secure your account and enable password recovery
+✅ Receive important account notifications  
+✅ Access all platform features without restrictions
+✅ Ensure you don't miss important updates
+
+IMPORTANT: This verification link will expire in {{expiryTime}}.
+
+If you're having trouble with the link above, copy and paste it into your web browser.
+
+Security Information:
+If you didn't create an account with us, please ignore this email. Your email address will not be added to our system without verification.
+
+---
+This email was sent from TypeScript Backend API
+If you have any questions, please contact our support team.
+
+© {{currentYear}} Gunners Dev. All rights reserved.

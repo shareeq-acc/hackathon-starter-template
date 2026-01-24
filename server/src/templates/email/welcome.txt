@@ -1,0 +1,32 @@
+TypeScript Backend API - Welcome!
+
+🎉 Welcome to our platform, {{userName}}!
+
+Hello {{userName}},
+
+Thank you for joining TypeScript Backend API! We're excited to have you on board. Your account has been created successfully and you're now part of our growing community.
+
+What you can do now:
+• Access secure API endpoints with JWT authentication
+• Generate inspiring quotes powered by AI
+• Manage your profile and account settings
+• Enjoy a fast and reliable TypeScript backend
+• Benefit from comprehensive error handling and logging
+
+{{#if verificationUrl}}
+Email Verification Required:
+To get started, please verify your email address by visiting the link below. This helps us ensure the security of your account.
+
+Verify your email: {{verificationUrl}}
+{{/if}}
+
+Need Help?
+If you have any questions or need assistance getting started, don't hesitate to reach out to our support team at {{supportEmail}}. We're here to help!
+
+We're committed to providing you with the best experience possible. Thank you for choosing TypeScript Backend API!
+
+---
+This email was sent from TypeScript Backend API
+You're receiving this because you created an account with us.
+
+© {{currentYear}} TypeScript Backend API. All rights reserved.
